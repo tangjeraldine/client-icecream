@@ -14,7 +14,8 @@ function AddIceCream() {
           </label>
           <label>
             Contains Nuts?:
-            <select>
+            {/* <input type='boolean' name='has_nuts' /> */}
+            <select name='has_nuts'>
               <option value='true'>Yes</option>
               <option value='false'>No</option>
             </select>

@@ -11,6 +11,13 @@ function Main() {
         }}>
         See All Ice Creams
       </button>
+      <h4>Or... </h4>
+      <button
+        onClick={() => {
+          navigate("/search");
+        }}>
+        Search for An Ice Cream
+      </button>
       <Outlet />
     </div>
   );

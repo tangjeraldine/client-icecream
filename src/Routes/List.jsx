@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { Form, useLoaderData, useNavigate } from "react-router-dom";
 
 function List() {
   const icecreams = useLoaderData();
@@ -8,8 +8,16 @@ function List() {
     <div>
       <h4>The list of ice creams available are as follows:</h4>
       <ul>
-        {icecreams.map((each) => (
-          <li>{each.name}</li>
+        {icecreams.map((each, index) => (
+          <div>
+            <li key={index}>{each.name}</li>
+            <Form method='put'>
+              <button>Edit</button>
+            </Form>
+            <Form method='delete'>
+              <button>Delete</button>
+            </Form>
+          </div>
         ))}
       </ul>
       <button
